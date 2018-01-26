@@ -1,0 +1,70 @@
+  total_run_times 0                   
+  background no                       
+  cpu_avg_samples 1                   
+  net_avg_samples 2                  
+  double_buffer yes                  
+  no_buffers yes                     
+  text_buffer_size 2048               
+  out_to_console no                  
+  update_interval 1                  
+  alignment top_right              
+  minimum_size 1336                
+  gap_x 15                         
+  gap_y 15                         
+  draw_shades no                   
+  draw_outline no                  
+  draw_borders no                  
+  border_width 0                   
+  border_inner_margin 30           
+  own_window yes                   
+  own_window_type override         
+  own_window_transparent yes       
+  use_xft yes                      
+  xftalpha .1                      
+  override_utf8_locale yes         
+  uppercase no                     
+  use_spacer right                  
+  xftfont UbuntuMono :size=10      
+  default_bar_size 100 8           
+  stippled_borders 10                
+  default_color FFFFFF                
+  default_shade_color 333333          
+  default_outline_color black         
+  #color1 FFFFFF
+ # color1 eee8d5
+  color1 fdf655
+  #color1 fbf1c7
+  #color1 c1d4d4
+  #color1 282828
+  #color2 D33682                      
+  #color3 FF1E19             
+  #color3 ff3a36
+  #color3 fb4934
+  color3 ff3a36
+  #color3 9d0006
+  #color4 BCD900
+  #color4 DEFF00
+  color4 aaff44
+  #color4 aaff88
+  #color4 b8bb26
+  color5 CB4B16						
+  color6 2AA198							
+  color7 B58900					
+  short_units yes                       
+  pad_percents 2                        
+TEXT
+#${color3}  PID         ${alignr}Memory        CPU
+#${color4}${top pid 1}      ${top name 1}${alignr}${top mem_res 1}     ${top cpu 1}%
+#${color4}${top pid 2}      ${top name 2}${alignr}${top mem_res 2}     ${top cpu 2}%
+#${color4}${top pid 3}      ${top name 3}${alignr}${top mem_res 3}     ${top cpu 3}%
+#${color4}${top pid 4}      ${top name 4}${alignr}${top mem_res 4}     ${top cpu 4}%
+#${color4}${top pid 5}      ${top name 5}${alignr}${top mem_res 5}     ${top cpu 5}%
+#${color4}${top pid 6}      ${top name 6}${alignr}${top mem_res 6}     ${top cpu 6}%
+#${color4}${top pid 7}      ${top name 7}${alignr}${top mem_res 7}     ${top cpu 7}%
+#${color4}${top pid 8}      ${top name 8}${alignr}${top mem_res 8}     ${top cpu 8}%
+#${color4}${top pid 9} 	    ${top name 9}${alignr}${top mem_res 9}	 ${top cpu 9}%
+${color3}Proc: ${color1}$running_processes${color1} / ${color1}$processes${alignr}${color3}Thrd: ${color1}$running_threads${color1} / ${color1}$threads
+${color3}RAM: ${color1}$mem / $memmax - $memperc%${alignr}${color3}CPU:${color1} ${cpu cpu0}%
+$fs_used of $fs_size used, approx $fs_free_perc% free${alignr}${color1}${exec uname -orm}
+${color3}Uptime:${color1} ${uptime}
+${color1}${font UbuntuMono:size=7.85}${exec ss -antupo | head -n 41}
